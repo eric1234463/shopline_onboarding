@@ -7,6 +7,12 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
+   # GET /users/count
+   def count
+    @users = User.all
+    render json: { users: @users.count }
+   end
+
   # GET /users/1
   # GET /users/1.json
   def show
@@ -60,6 +66,7 @@ class UsersController < ApplicationController
       format.json { head :no_content }
     end
   end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
