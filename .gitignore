@@ -17,3 +17,6 @@
 /tmp
 
 .vscode
+
+
+vendor/assets/node_modules/
