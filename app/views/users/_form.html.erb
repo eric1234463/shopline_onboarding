@@ -19,6 +19,21 @@
     <%= f.label :last_name %><br>
     <%= f.text_field :last_name %>
   </div>
+  <% @user.address.each do |key, value| %>
+    <div class="field">
+      <%= f.label key %>
+      <%= text_field_tag "user[address][#{key}]", value %>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :age %><br>
+    <%= f.number_field :age %>
+  </div>
+  <div class="field">
+    <%= f.select(:gender) do %>
+      <%= options_for_select([['Select',''],['Male', 'M'], ['Female', 'F'], ['Other', 'O']], @user.gender) %>
+    <% end %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

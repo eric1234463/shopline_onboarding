@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :set_user, only: [:show, :edit, :update, :destroy, :name]
 
   # GET /users
   # GET /users.json
@@ -7,12 +7,14 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
-   # GET /users/count
-   def count
+  # GET /users/count
+  def count
     @users = User.all
     render json: { users: @users.count }
-   end
+  end
 
+  def name
+  end
   # GET /users/1
   # GET /users/1.json
   def show
@@ -76,6 +78,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:first_name, :last_name)
+      params.require(:user).permit(:first_name, :last_name, :age, :gender, :address => [ :country, :address_1 , :address_2 ])
     end
 end
