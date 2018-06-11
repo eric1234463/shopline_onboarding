@@ -1,13 +1,20 @@
 app.config(function($routeProvider, $locationProvider) {
-  $locationProvider.html5Mode({ enabled: true, requireBase: false });
-
   $routeProvider
+    .when("/", {
+      templateUrl: "/views/index.html",
+      controller: "UserController"
+    })
     .when("/users", {
-      templateUrl: "/",
+      templateUrl: "/views/index.html",
       controller: "UserController"
     })
     .when("/users/:user_id/edit", {
-      templateUrl: "/",
+      templateUrl: "/views/edit.html",
       controller: "UserEditController"
+    })
+    .otherwise({
+      redirectTo: '/'
     });
+
+    $locationProvider.html5Mode(true);
 });

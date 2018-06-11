@@ -1,0 +1,35 @@
+<div>
+  <h1>Listing Users</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Country</th>
+        <th>Address 1</th>
+        <th>Address 2</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr ng-repeat="user in users">
+        <td>{{user.first_name}}</td>
+        <td>{{user.last_name}}</td>
+        <td>{{user.age}}</td>
+        <td>{{user.gender}}</td>
+        <td>{{user.address.country}}</td>
+        <td>{{user.address.address_1}}</td>
+        <td>{{user.address.address_2}}</td>
+        <td>
+          <a ng-href="/users/{{user.id.$oid}}/edit">Edit</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <br>
+
+</div>

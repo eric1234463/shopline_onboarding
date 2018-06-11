@@ -1,4 +1,4 @@
-<div ng-controller="UserController">
+<div>
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Users</h1>
@@ -26,7 +26,6 @@
       <td>{{user.address.country}}</td>
       <td>{{user.address.address_1}}</td>
       <td>{{user.address.address_2}}</td>
-
       <td><a ng-href="/users/{{user.id.$oid}}/edit">Edit</a></td>
     </tr>
   </tbody>

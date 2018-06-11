@@ -49,7 +49,7 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1.json
   def update
     if @user.update(user_params)
-      format.json { render :ok }
+      render json: { status: :ok}
     else
       format.json { render json: @user.errors, status: :unprocessable_entity }
     end

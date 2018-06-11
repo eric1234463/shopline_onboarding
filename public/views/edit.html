@@ -1,0 +1,38 @@
+<div>
+    <form ng-submit="formSubmit()">
+      <h1>Editing User</h1>
+  
+      <div class="field">
+        <label>First Name</label>
+        <input input="text" ng-model="user.first_name">
+      </div>
+      <div class="field">
+        <label>Last Name</label>
+        <input input="text" ng-model="user.last_name">
+      </div>
+      <div class="field">
+        <label>Age</label>
+        <input input="nunber" ng-model="user.age">
+      </div>
+  
+      <div class="field">
+        <label>Country</label>
+        <input input="text" ng-model="user.address.country">
+      </div>
+  
+      <div class="field">
+        <label>Address 1</label>
+        <input input="text" ng-model="user.address.address_1">
+      </div>
+  
+      <div class="field">
+        <label>Address 2</label>
+        <input input="text" ng-model="user.address.address_2">
+      </div>
+  
+    <div class="actions">
+      <button>Submit</button>
+    </div>
+    </form>
+    <a ng-href="/users">Back</a>
+  </div>

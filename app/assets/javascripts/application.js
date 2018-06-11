@@ -16,4 +16,8 @@
 //= require angular/angular
 //= require angular-route/angular-route
 
-//= require_tree .
+//= require app.js
+//= require route.js
+//= require user/user.service.js
+//= require user/controller.user.edit.js
+//= require user/controller.user.index.js
