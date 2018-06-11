@@ -16,6 +16,11 @@
     </div>
 
     <div class="field">
+      <label>Gender</label>
+      <select ng-model="user.gender" ng-options="gender.value as gender.label for gender in genders"></select>
+    </div>
+
+    <div class="field">
       <label>Country</label>
       <input input="text" ng-model="user.address.country">
     </div>

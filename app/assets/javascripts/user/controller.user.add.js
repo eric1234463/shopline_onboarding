@@ -1,4 +1,4 @@
-app.controller("UserEditController", [
+app.controller("UserAddController", [
   "$scope",
   "$location",
   "$routeParams",

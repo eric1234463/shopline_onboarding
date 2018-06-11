@@ -8,6 +8,10 @@ app.config(function($routeProvider, $locationProvider) {
       templateUrl: "/views/users/index.html",
       controller: "UserController"
     })
+    .when("/users/add", {
+      templateUrl: "/views/users/add.html",
+      controller: "UserAddController"
+    })
     .when("/users/:user_id/edit", {
       templateUrl: "/views/users/edit.html",
       controller: "UserEditController"

@@ -13,6 +13,11 @@ app.service("UserService", [
         return $http.put("http://54.169.123.170:32794/users/"+user_id, {
           user
         });
+      },
+      createUser: function(user) {
+        return $http.post("http://54.169.123.170:32794/users/", {
+          user
+        });
       }
     };
   }
