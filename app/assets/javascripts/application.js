@@ -19,5 +19,4 @@
 //= require app.js
 //= require route.js
 //= require user/user.service.js
-//= require user/controller.user.edit.js
-//= require user/controller.user.index.js
+//= require_tree .

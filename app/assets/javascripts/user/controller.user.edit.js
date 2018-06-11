@@ -12,7 +12,7 @@ app.controller("UserEditController", [
       });
     });
 
-    $scope.formSubmit = function() {
+    $scope.handleFormSubmit = function() {
       const user = $scope.user;
       UserService.updateUser($routeParams.user_id, user).then(function(
         response
