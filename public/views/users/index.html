@@ -26,6 +26,9 @@
         <td>
           <a ng-href="/users/{{user.id.$oid}}/edit">Edit</a>
         </td>
+        <td>
+          <button type="button" ng-click="deleteUser(user.id.$oid)">Delete</button>
+        </td>
       </tr>
     </tbody>
   </table>

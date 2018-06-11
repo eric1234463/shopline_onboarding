@@ -6,7 +6,7 @@ class User
 
   validates :first_name, presence: true
   validates :last_name, presence: true
-  validates :age, presence: true, numericality: { only_integer: true, greater_than: 0 }
+  validates :age, presence: true, numericality: { only_integer: true, greater_than: 0, less_than: 100 }
   validates :gender, inclusion: { in: %w(M F O), message: "%{value} is not a valid size" }
   validates :address, presence: true
 

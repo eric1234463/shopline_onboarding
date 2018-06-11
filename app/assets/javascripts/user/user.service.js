@@ -14,6 +14,9 @@ app.service("UserService", [
           user
         });
       },
+      deleteUser: function(user_id) {
+        return $http.delete("http://54.169.123.170:32794/users/"+user_id);
+      },
       createUser: function(user) {
         return $http.post("http://54.169.123.170:32794/users/", {
           user

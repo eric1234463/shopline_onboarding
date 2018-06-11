@@ -7,5 +7,13 @@ app.controller("UserController", [
         $scope.users = response.data;
       });
     });
+
+    $scope.deleteUser = function(user_id) {
+      UserService.deleteUser(user_id).then(function() {
+        UserService.getUsers().then(function(response) {
+          $scope.users = response.data;
+        });
+      });
+    };
   }
 ]);
