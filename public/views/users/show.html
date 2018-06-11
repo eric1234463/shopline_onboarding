@@ -1,0 +1,26 @@
+<h2>View User</h2>
+<p>
+    <strong>Last name:</strong>
+    {{user.last_name}}
+</p>
+<p>
+    <strong>First name:</strong>
+    {{user.first_name}}
+</p>
+<p>
+    <strong>Gender:</strong>
+    {{user.gender}}
+</p>
+
+<p>
+    <strong>Age:</strong>
+    {{user.age}}
+</p>
+
+<p>
+    <strong>Address:</strong>
+    {{user.address.country}} - {{user.address.address_1}} - {{user.address.address_2}}
+</p>
+
+<a ng-href="/users">Back</a>
+<a ng-href="/users/{{user.id.$oid}}/edit">Edit</a>

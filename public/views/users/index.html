@@ -24,6 +24,9 @@
         <td>{{user.address.address_1}}</td>
         <td>{{user.address.address_2}}</td>
         <td>
+            <a ng-href="/users/{{user.id.$oid}}">Show Detail</a>
+          </td>
+        <td>
           <a ng-href="/users/{{user.id.$oid}}/edit">Edit</a>
         </td>
         <td>
