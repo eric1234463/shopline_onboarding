@@ -9,6 +9,9 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "angular": "^1.7.0"
+    "@uirouter/angularjs": "^1.0.18",
+    "angular": "^1.7.0",
+    "angular-route": "^1.7.0",
+    "angular-ui-router": "^1.0.18"
   }
 }

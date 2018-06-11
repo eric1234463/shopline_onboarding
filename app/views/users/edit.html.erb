@@ -1,8 +1,38 @@
-<div ng-controller='UserEditController'>
-  <h1>Editing User</h1>
+<div ng-controller="UserEditController">
+  <form ng-submit="formSubmit()">
+    <h1>Editing User</h1>
 
-  <%= render 'form' %>
+    <div class="field">
+      <label>First Name</label>
+      <input input="text" ng-model="user.first_name">
+    </div>
+    <div class="field">
+      <label>Last Name</label>
+      <input input="text" ng-model="user.last_name">
+    </div>
+    <div class="field">
+      <label>Age</label>
+      <input input="nunber" ng-model="user.age">
+    </div>
 
-  <%= link_to 'Show', @user %> |
-  <%= link_to 'Back', users_path %>
+    <div class="field">
+      <label>Country</label>
+      <input input="text" ng-model="user.address.country">
+    </div>
+
+    <div class="field">
+      <label>Address 1</label>
+      <input input="text" ng-model="user.address.address_1">
+    </div>
+
+    <div class="field">
+      <label>Address 2</label>
+      <input input="text" ng-model="user.address.address_2">
+    </div>
+
+  <div class="actions">
+    <button>Submit</button>
+  </div>
+  </form>
+  <a ng-href="/users">Back</a>
 </div>

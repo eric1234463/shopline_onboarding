@@ -1,3 +1,4 @@
+<div ng-controller="UserController">
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Users</h1>
@@ -17,25 +18,21 @@
   </thead>
 
   <tbody>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= user.first_name %></td>
-        <td><%= user.last_name %></td>
-        <td><%= user.age %></td>
-        <td><%= user.gender %></td>
-        <td><%= user.address[:country] %></td>
-        <td><%= user.address[:address_1] %></td>
-        <td><%= user.address[:address_2] %></td>
+    <tr ng-repeat="user in users">
+      <td>{{user.first_name}}</td>
+      <td>{{user.last_name}}</td>
+      <td>{{user.age}}</td>
+      <td>{{user.gender}}</td>
+      <td>{{user.address.country}}</td>
+      <td>{{user.address.address_1}}</td>
+      <td>{{user.address.address_2}}</td>
 
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Show Full Name', name_user_path(user) %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
+      <td><a ng-href="/users/{{user.id.$oid}}/edit">Edit</a></td>
+    </tr>
   </tbody>
 </table>
 
 <br>
 
 <%= link_to 'New User', new_user_path %>
+</div>
